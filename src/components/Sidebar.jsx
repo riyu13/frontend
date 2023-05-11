@@ -16,7 +16,7 @@ const Sidebar = () => {
     const { user } = useSelector((state)=>state.auth);
   return (
     <div>
-        <aside className="menu has-shadow is-fixed" style={{backgroundColor: '#B0E0E6'}}>
+        <aside className="menu pl-1 is-fixed">
             <p className='menu-label'>a</p>
             <p className='menu-label'>a</p>
             <p className="menu-label">

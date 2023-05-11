@@ -1,6 +1,5 @@
 import React, {useState, useEffect } from 'react';
 import axios from 'axios';
-// import '../../../app/Card.css'
 
 const HirakataKen = () => {
     const [hirakata, setHirakata] = useState([]);

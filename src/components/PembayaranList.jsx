@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import { FaEdit, FaPrint, FaTrash } from "react-icons/fa"
+import jsPDF from 'jspdf';
 
 const PembayaranList = () => {
     const [pembayaran, setPembayaran] = useState([]);
@@ -37,13 +39,30 @@ const PembayaranList = () => {
             getPembayaran();
           })
     }
+    const handlePrint = (pembayaran) => {
+        const doc = new jsPDF();
+
+        doc.setFontSize(18);
+        doc.text("Bukti Pembayaran", 105, 10, null, null, "center");
+
+        doc.addImage("../assets/logo.jpeg", "JPEG", 15, 40, 180, 180);
+
+        doc.setFontSize(12);
+        doc.text(`Kode Transaksi: ${pembayaran.uuid}`, 10, 30);
+        doc.text(`Nama: ${pembayaran.pesertamagang.nama}`, 10, 40);
+        doc.text(`Keterangan: ${pembayaran.keterangan}`, 10, 50);
+        doc.text(`Biaya: ${pembayaran.biaya}`, 10, 60);
+
+        doc.setFontSize(10);
+        doc.text("Surakarta,____-____-_________", 200, 70, null, null, "right");
+        doc.text("(______________________)", 200, 100, null, null, "right");
+        doc.text("Terima kasih atas pembayaran anda", 105, 110, null, null, "center");
+        doc.save(`${pembayaran.uuid}.pdf`);
+    };
 
   return (
     <div>
         <div>
-        {/* <h1 className='title'>Pembayaran</h1>
-        <h2 className='subtitle'>Riwayat Transaksi Pembayaran</h2> */}
-        {/* <Link to="/pembayaran/add" className='button is-primary mb-2'>Pembayaran</Link> */}
         <table className='table is-striped is-fullwidth is-hoverable is-bordered' style={{backgroundColor: '#FFFFE0'}}>
             <thead>
                 <tr>
@@ -66,8 +85,9 @@ const PembayaranList = () => {
                     <td>{pembayaran.user.nama}</td>
                     <td>{pembayaran.pesertamagang.nama}</td>
                     <td>
-                        <Link to={`/pembayaran/edit/${pembayaran.uuid}`} className="button is-small is-info">Edit</Link>
-                        <button onClick={()=>deletePembayaran(pembayaran.uuid)} to={`/pembayaran/edit/${pembayaran.uuid}`} className="button is-small is-danger">Delete</button>
+                    <button onClick={() => handlePrint(pembayaran)} className="button is-small is-warning"><FaPrint/></button>
+                        <Link to={`/pembayaran/edit/${pembayaran.uuid}`} className="button is-small is-info"><FaEdit/></Link>
+                        <button onClick={()=>deletePembayaran(pembayaran.uuid)} to={`/pembayaran/edit/${pembayaran.uuid}`} className="button is-small is-danger"><FaTrash/></button>
                     </td>
                 </tr>
                 ))}

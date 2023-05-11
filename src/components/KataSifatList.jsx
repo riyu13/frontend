@@ -4,6 +4,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import ReactPaginate from "react-paginate";
+import { FaEdit, FaTrash } from 'react-icons/fa';
 
 const KataSifatList = () => {
     const [katasifat, setKataSifat] = useState([]);
@@ -123,8 +124,8 @@ const KataSifatList = () => {
                     <td>{katasifat.arti}</td>
                     {/* <td>{katasifat.user.nama}</td> */}
                     <td>
-                    <Link to={`/katasifat/edit/${katasifat.uuid}`} className="button is-small is-info">Edit</Link>
-                        <button onClick={()=>deleteKataSifat(katasifat.uuid)} to={`/katasifat/edit/${katasifat.uuid}`} className="button is-small is-danger">Delete</button>
+                    <Link to={`/katasifat/edit/${katasifat.uuid}`} className="button is-small is-info"><FaEdit/></Link>
+                        <button onClick={()=>deleteKataSifat(katasifat.uuid)} to={`/katasifat/edit/${katasifat.uuid}`} className="button is-small is-danger"><FaTrash/></button>
                     </td>
                 </tr>
                 ))}

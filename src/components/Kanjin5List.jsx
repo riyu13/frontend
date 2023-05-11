@@ -4,6 +4,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import ReactPaginate from "react-paginate";
+import { FaTrash, FaEdit } from 'react-icons/fa';
 
 const Kanjin5List = () => {
     const [kanjin5, setKanjin5] = useState([]);
@@ -123,8 +124,8 @@ const Kanjin5List = () => {
                     <td>{kanjin5.arti}</td>
                     {/* <td>{kanjin5.user.nama}</td> */}
                     <td>
-                    <Link to={`/kanjin5/edit/${kanjin5.uuid}`} className="button is-small is-info">Edit</Link>
-                        <button onClick={()=>deleteKanjin5(kanjin5.uuid)} to={`/kanjin5/edit/${kanjin5.uuid}`} className="button is-small is-danger">Delete</button>
+                    <Link to={`/kanjin5/edit/${kanjin5.uuid}`} className="button is-small is-info"><FaEdit/></Link>
+                        <button onClick={()=>deleteKanjin5(kanjin5.uuid)} to={`/kanjin5/edit/${kanjin5.uuid}`} className="button is-small is-danger"><FaTrash/></button>
                     </td>
                 </tr>
                 ))}

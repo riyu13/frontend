@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import { FaTrash, FaEdit } from 'react-icons/fa';
 
 const HirakataList = () => {
     const [hirakata, setHirakata] = useState([]);
@@ -61,8 +62,8 @@ const HirakataList = () => {
                     <td>{hirakata.katakana}</td>
                     <td>{hirakata.romaji}</td>
                     <td>
-                    <Link to={`/hirakata/edit/${hirakata.uuid}`} className="button is-small is-info">Edit</Link>
-                        <button onClick={()=>deleteHirakata(hirakata.uuid)} to={`/hirakata/edit/${hirakata.uuid}`} className="button is-small is-danger">Delete</button>
+                    <Link to={`/hirakata/edit/${hirakata.uuid}`} className="button is-small is-info"><FaEdit/></Link>
+                        <button onClick={()=>deleteHirakata(hirakata.uuid)} to={`/hirakata/edit/${hirakata.uuid}`} className="button is-small is-danger"><FaTrash/></button>
                     </td>
                 </tr>))}
             </tbody>

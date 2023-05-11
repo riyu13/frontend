@@ -78,9 +78,6 @@ import Naidekudasai1 from "./pages/pesertamagangui/pages/bentuk2/Naidekudasai";
 import Nakerebanaranai1 from "./pages/pesertamagangui/pages/bentuk2/Nakerebanaranai";
 import Landingpage from "./pages/Landingpage";
 
-
-
-
 function App() {
   return (
     <div>

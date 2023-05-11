@@ -4,6 +4,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import ReactPaginate from "react-paginate";
+import { FaTrash, FaEdit } from 'react-icons/fa';
 
 const KataKerjaList = () => {
     const [katakerja, setKataKerja] = useState([]);
@@ -122,8 +123,8 @@ const KataKerjaList = () => {
                     <td>{katakerja.arti}</td>
                     {/* <td>{katakerja.user.nama}</td> */}
                     <td>
-                    <Link to={`/katakerja/edit/${katakerja.uuid}`} className="button is-small is-info">Edit</Link>
-                        <button onClick={()=>deleteKataKerja(katakerja.uuid)} to={`/katakerja/edit/${katakerja.uuid}`} className="button is-small is-danger">Delete</button>
+                    <Link to={`/katakerja/edit/${katakerja.uuid}`} className="button is-small is-info"><FaEdit/></Link>
+                        <button onClick={()=>deleteKataKerja(katakerja.uuid)} to={`/katakerja/edit/${katakerja.uuid}`} className="button is-small is-danger"><FaTrash/></button>
                     </td>
                 </tr>
                 ))}

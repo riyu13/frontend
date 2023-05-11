@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import { FaTrash, FaEdit } from 'react-icons/fa';
 
 const UserList = () => {
     const [users, setUsers] = useState([]);
@@ -73,8 +74,8 @@ const UserList = () => {
                     <td>{users.email}</td>
                     <td>{users.role}</td>
                     <td>
-                    <Link to={`/users/edit/${users.uuid}`} className="button is-small is-info">Edit</Link>
-                        <button onClick={()=>deleteUsers(users.uuid)} to={`/users/edit/${users.uuid}`} className="button is-small is-danger">Delete</button>
+                    <Link to={`/users/edit/${users.uuid}`} className="button is-small is-info"><FaEdit/></Link>
+                        <button onClick={()=>deleteUsers(users.uuid)} to={`/users/edit/${users.uuid}`} className="button is-small is-danger"><FaTrash/></button>
                     </td>
                 </tr>))}
             </tbody>
