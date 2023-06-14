@@ -32,6 +32,7 @@ const Sidebar = () => {
                 </span>
                 </NavLink></li>
             </ul>
+             {user && user.role === "admin" && (
             <ul className="menu-list">
                 <li><NavLink to={"/pembayaran"}>
                 <span className="icon-text">
@@ -41,7 +42,7 @@ const Sidebar = () => {
                     <span>Pembayaran</span>
                 </span>
                 </NavLink></li>
-            </ul>
+            </ul>)}
             {user && user.role === "admin" && (
                 <div>
                     <p className="menu-label">

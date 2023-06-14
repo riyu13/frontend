@@ -31,8 +31,18 @@ const FormAddPesertaMagang = () => {
     const [msg, setMsg] = useState("");
     const MySwal = withReactContent(Swal);
     const navigate = useNavigate();
+    const handleChange = (e) => {
+    const inputPhone = e.target.value;
+    // Menghapus karakter selain angka
+    const formattedPhone = inputPhone.replace(/\D/g, '');
 
-    
+    // Membatasi panjang nomor telepon maksimal 13 digit angka
+    if (formattedPhone.length <= 13) {
+      setNotelp(formattedPhone);
+    }
+  };
+
+    const [currentDate, setCurrentDate] = useState(new Date());
     //metode insert user
     const savePesertaMagang = async(e) => {
         e.preventDefault();
@@ -121,6 +131,42 @@ const FormAddPesertaMagang = () => {
         }
        getVillages();
         },[districtId]);
+
+    const formatDate = (date) => {
+        const day = date.getDate();
+        const month = date.getMonth() + 1;
+        const year = date.getFullYear().toString().slice(-2);
+        return `Y${year}M${month}D${day}`;
+    };
+
+    const formatTime = (date) => {
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+        const seconds = date.getSeconds();
+        return `H${hours}M${minutes}S${seconds}`;
+    };
+
+    const generatePassword = () => {
+        const formattedDate = formatDate(currentDate);
+        const formattedTime = formatTime(currentDate);
+        return `${formattedDate}${formattedTime}`;
+    };
+
+    useEffect(() => {
+        const generatedPassword = generatePassword();
+        setPassword(generatedPassword);
+    }, []);
+
+    const generateConfPassword = () => {
+        const formattedDate = formatDate(currentDate);
+        const formattedTime = formatTime(currentDate);
+        return `${formattedDate}${formattedTime}`;
+    };
+
+    useEffect(() => {
+        const generatedConfPassword = generateConfPassword();
+        setConfPassword(generatedConfPassword);
+    }, []);
 
   return (
     <div>
@@ -211,8 +257,18 @@ const FormAddPesertaMagang = () => {
                         <div className="column">
                         <label className="label">No. Telpon</label>
                         <div className="control">
-                            <input type="number" className="input" placeholder='Nomor Telpon' value={notelp} onChange={(e) => setNotelp(e.target.value)} required/>
-                        </div></div>
+                            <input
+                            type="text"
+                            className="input"
+                            placeholder="Nomor Telpon"
+                            value={notelp}
+                            onChange={handleChange}
+                            required
+                            />
+                        </div>
+                        {notelp.length > 13 && (
+                            <p>Panjang nomor telepon maksimal 13 digit.</p>
+                        )}</div>
                         <div className="column">
                         <label className="label">Jalur</label>
                     <div className="select">
@@ -233,7 +289,7 @@ const FormAddPesertaMagang = () => {
                     <div className="field">
                         <label className="label">Password</label>
                         <div className="control">
-                            <input type="password" className="input" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='*******' required/>
+                            <input type="text" className="input" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='*******' required disabled/>
                         </div>
                         </div>
                     </div>
@@ -241,7 +297,7 @@ const FormAddPesertaMagang = () => {
                     <div className="field">
                         <label className="label">Konfiramsi Password</label>
                         <div className="control">
-                            <input type="password" className="input" value={confpassword} onChange={(e) => setConfPassword(e.target.value)} placeholder='*******' required/>
+                            <input type="text" className="input" value={confpassword} onChange={(e) => setConfPassword(e.target.value)} placeholder='*******' required disabled/>
                         </div>
                     </div></div></div>
                     <div className="field">

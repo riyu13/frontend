@@ -7,9 +7,8 @@ import 'bulma/css/bulma.css';
 import axios from 'axios';
 import "./app/FlipCard.css";
 import "./app/Beranda.css";
-// import "./app/Button.css";
 
-//agar setiap request ke server menyediakan kredensial
+// Mengatur kredensial global untuk permintaan Axios
 axios.defaults.withCredentials = true;
 
 const container = document.getElementById('root');

@@ -29,6 +29,7 @@ const FormAddUser = () => {
     const [password, setPassword] = useState("");
     const [confpassword, setConfPassword] = useState("");
     const [msg, setMsg] = useState("");
+    const [currentDate, setCurrentDate] = useState(new Date());
     const MySwal = withReactContent(Swal);
     const navigate = useNavigate();
 
@@ -126,7 +127,41 @@ const FormAddUser = () => {
     //     const getvillagesid= event.target.value;
     //     setVillagesid(getvillagesid);
     // }
+    const formatDate = (date) => {
+        const day = date.getDate();
+        const month = date.getMonth() + 1;
+        const year = date.getFullYear().toString().slice(-2);
+        return `Y${year}M${month}D${day}`;
+    };
 
+    const formatTime = (date) => {
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+        const seconds = date.getSeconds();
+        return `H${hours}M${minutes}S${seconds}`;
+    };
+
+    const generatePassword = () => {
+        const formattedDate = formatDate(currentDate);
+        const formattedTime = formatTime(currentDate);
+        return `${formattedDate}${formattedTime}`;
+    };
+
+    useEffect(() => {
+        const generatedPassword = generatePassword();
+        setPassword(generatedPassword);
+    }, []);
+
+    const generateConfPassword = () => {
+        const formattedDate = formatDate(currentDate);
+        const formattedTime = formatTime(currentDate);
+        return `${formattedDate}${formattedTime}`;
+    };
+
+    useEffect(() => {
+        const generatedConfPassword = generateConfPassword();
+        setConfPassword(generatedConfPassword);
+    }, []);
    
 
   return (
@@ -240,7 +275,7 @@ const FormAddUser = () => {
                     <div className="field">
                         <label className="label">Password</label>
                         <div className="control">
-                            <input type="password" className="input" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='*******' required/>
+                            <input type="text" className="input" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='*******' required disabled/>
                         </div>
                         </div>
                     </div>
@@ -248,7 +283,7 @@ const FormAddUser = () => {
                     <div className="field">
                         <label className="label">Konfiramsi Password</label>
                         <div className="control">
-                            <input type="password" className="input" value={confpassword} onChange={(e) => setConfPassword(e.target.value)} placeholder='*******' required/>
+                            <input type="text" className="input" value={confpassword} onChange={(e) => setConfPassword(e.target.value)} placeholder='*******' required disabled/>
                         </div>
                     </div></div></div>
                     <div className="field">

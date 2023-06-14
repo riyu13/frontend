@@ -6,14 +6,14 @@ const Sugiru = () => {
     <div>
         <h1 className='title'>Kata Kerja Masu</h1>
         <h2 className='subtitle'>Kata Kerja Bentuk Sopan (Masu)</h2>
-        <div className='card'>
+        <div className='card' style={{backgroundColor: '#ffffe0'}}>
         <div className='card-content'>
             <nav className="pagination is-right" role="navigation" aria-label="pagination">
               <ul className="pagination-list">
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/bentuk1k"}>1</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/taik"}>2</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/sugiruk"}>3</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/yasuik"}>4</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/bentuk1k"} style={{color: 'black'}}>1</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/taik"} style={{color: 'black'}}>2</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1" style={{backgroundColor: '#8b4513'}}><NavLink to={"/sugiruk"} style={{color: 'white'}}>3</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/yasuik"} style={{color: 'black'}}>4</NavLink></a></li>
               </ul>
             </nav>
             <strong>5. Penggunaan (すぎる / なすぎる) atau Sugiru/Nasugiru</strong>

@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "homepage": "http://lpkyukimaga.my.id/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
@@ -11,6 +12,7 @@
     "bulma": "^0.9.4",
     "gh-pages": "^5.0.0",
     "jspdf": "^2.5.1",
+    "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
@@ -19,6 +21,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
+    "serve": "^14.2.0",
     "sweetalert2": "^11.6.16",
     "sweetalert2-react-content": "^5.0.7",
     "web-vitals": "^2.1.4"
@@ -46,6 +49,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {}
+  }
 }

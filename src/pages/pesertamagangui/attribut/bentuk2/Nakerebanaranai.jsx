@@ -6,13 +6,13 @@ const Nakerebanaranai = () => {
     <div>
         <h1 className='title'>Kata Kerja Negatif</h1>
         <h2 className='subtitle'>Kata Kerja Bentuk Negatif (-A)</h2>
-        <div className='card'>
+        <div className='card' style={{backgroundColor: '#ffffe0'}}>
         <div className='card-content'>
             <nav className="pagination is-right" role="navigation" aria-label="pagination">
               <ul className="pagination-list">
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nai1"}>1</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/naidekudasai1"}>2</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nakerebanaranai1"}>3</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nai1"} style={{color: 'black'}}>1</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/naidekudasai1"}  style={{color: 'black'}}>2</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1" style={{backgroundColor: '#8b4513'}}><NavLink to={"/nakerebanaranai1"}  style={{color: 'white'}}>3</NavLink></a></li>
               </ul>
             </nav>
             <strong>5. Kata kerja + ~なければなりません </strong>

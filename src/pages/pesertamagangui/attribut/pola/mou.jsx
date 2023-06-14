@@ -6,16 +6,16 @@ const mou = () => {
     <div>
         <h1 className='title'>Pola Kata & Kalimat</h1>
     <h2 className='subtitle'>Pola dasar yang sering digunakan komunikasi oleh orang jepang</h2>
-    <div className='card'>
+    <div className='card' style={{backgroundColor: '#ffffe0'}}>
         <div className='card-content'>
             <nav className="pagination is-right" role="navigation" aria-label="pagination">
               <ul className="pagination-list">
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/pengertian1"}>1</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/mou1"}>2</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/darou1"}>3</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nonakade1"}>4</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nisuru1"}>5</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nakanaka1"}>6</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/pengertian1"} style={{color: 'black'}}>1</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1" style={{backgroundColor: '#8b4513'}}><NavLink to={"/mou1"} style={{color: 'white'}}>2</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/darou1"} style={{color: 'black'}}>3</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nonakade1"} style={{color: 'black'}}>4</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nisuru1"} style={{color: 'black'}}>5</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nakanaka1"} style={{color: 'black'}}>6</NavLink></a></li>
               </ul>
             </nav>
             <strong>1. Penggunaan もう atau mou</strong>

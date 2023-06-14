@@ -6,16 +6,16 @@ const nisuru = () => {
     <div>
      <h1 className='title'>Pola Kata & Kalimat</h1>
     <h2 className='subtitle'>Pola dasar yang sering digunakan komunikasi oleh orang jepang</h2>
-    <div className='card'>
+    <div className='card' style={{backgroundColor: '#ffffe0'}}>
         <div className='card-content'>
             <nav className="pagination is-right" role="navigation" aria-label="pagination">
               <ul className="pagination-list">
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/pengertian1"}>1</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/mou1"}>2</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/darou1"}>3</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nonakade1"}>4</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nisuru1"}>5</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nakanaka1"}>6</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/pengertian1"} style={{color: 'black'}}>1</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/mou1"} style={{color: 'black'}}>2</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/darou1"} style={{color: 'black'}}>3</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nonakade1"} style={{color: 'black'}}>4</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1" style={{backgroundColor: '#8b4513'}}><NavLink to={"/nisuru1"} style={{color: 'white'}}>5</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/nakanaka1"} style={{color: 'black'}}>6</NavLink></a></li>
               </ul>
             </nav>
             <strong>7. にする atau Ni suru</strong>
@@ -33,8 +33,6 @@ const nisuru = () => {
                 <p>- Pilih teh</p>
                 </div>
             </div>
-            </div>
-            </div>
             <br/>
             <strong>8. と言います atau Toiimasu</strong>
             <p>"Toiimasu" (と言います) dalam bahasa Jepang berarti "mengatakan" atau "mengucapkan". Frasa ini berasal dari kata kerja "iu" (言う) yang artinya juga "mengatakan" atau "berbicara".</p>
@@ -50,6 +48,8 @@ const nisuru = () => {
                     <p>- ano hito wa ashita yasumi toiimashita.</p>
                     <p>- Orang itu mengatakan besok libur.</p>
                 </div>
+            </div>
+            </div>
             </div>
     </div>
   )

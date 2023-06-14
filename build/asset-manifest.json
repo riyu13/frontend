@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ec7f8acf.css",
+    "main.js": "/static/js/main.0f4a98c6.js",
+    "static/js/498.8c7f5c60.chunk.js": "/static/js/498.8c7f5c60.chunk.js",
+    "static/js/703.674d2745.chunk.js": "/static/js/703.674d2745.chunk.js",
+    "static/js/598.2dcf40a8.chunk.js": "/static/js/598.2dcf40a8.chunk.js",
+    "static/media/sora-sagano-8sOZJ8JF0S8-unsplash.jpg": "/static/media/sora-sagano-8sOZJ8JF0S8-unsplash.79db49f380898a4ea107.jpg",
+    "static/media/gambar5.jpg": "/static/media/gambar5.d136aa50db66881e3a39.jpg",
+    "static/media/gambar4.jpg": "/static/media/gambar4.d09218428b58a1c61b60.jpg",
+    "static/media/david-edelstein-N4DbvTUDikw-unsplash.jpg": "/static/media/david-edelstein-N4DbvTUDikw-unsplash.a1dabdd1d21c11baceea.jpg",
+    "static/media/clay-banks-hwLAI5lRhdM-unsplash.jpg": "/static/media/clay-banks-hwLAI5lRhdM-unsplash.b7acd49ebc806147555d.jpg",
+    "static/media/Yoga Tri Prasetyo.jpg": "/static/media/Yoga Tri Prasetyo.ea82ac4a7ab7228ed0ec.jpg",
+    "static/media/Yulianto.jpg": "/static/media/Yulianto.1e363626790866008b3e.jpg",
+    "static/media/gambar3.jpg": "/static/media/gambar3.92d443cd688d2be29ad9.jpg",
+    "static/media/gambar1.jpg": "/static/media/gambar1.96cc99e21b0bc550264c.jpg",
+    "static/media/Eka Nur Fitria.jpg": "/static/media/Eka Nur Fitria.324a76e6aa5f8778f1b5.jpg",
+    "static/media/logo.png": "/static/media/logo.6794b6953b2dcc2a0b8d.png",
+    "static/media/Giri Handoko.jpg": "/static/media/Giri Handoko.f38e06ad48b210887312.jpg",
+    "static/media/gambar2.jpg": "/static/media/gambar2.4332087c73df6c311eb5.jpg",
+    "static/media/Gilang (1).jpg": "/static/media/Gilang (1).1f58b62f58954e389d81.jpg",
+    "static/media/Rifhai.jpg": "/static/media/Rifhai.c025682f1c9df94edf7b.jpg",
+    "static/media/Budi Santoso.jpg": "/static/media/Budi Santoso.a42e53ee5f5414833400.jpg",
+    "static/media/Andi Setiawan.jpg": "/static/media/Andi Setiawan.d83b3c6fbfc07efc2581.jpg",
+    "static/media/Thopa Syaibani (1).jpg": "/static/media/Thopa Syaibani (1).d3d4f9a695ea6a636329.jpg",
+    "static/media/undraw_interview_re_e5jn.svg": "/static/media/undraw_interview_re_e5jn.abda7edc7db84496819ad7d06f015957.svg",
+    "static/media/undraw_connection_re_lcud.svg": "/static/media/undraw_connection_re_lcud.5eaaaf675589b47753b12c2f4ede2526.svg",
+    "static/media/undraw_working_remotely_re_6b3a.svg": "/static/media/undraw_working_remotely_re_6b3a.92c07230526851068cb86d69e6113aa9.svg",
+    "static/media/undraw_contact_us_re_4qqt.svg": "/static/media/undraw_contact_us_re_4qqt.a78067b14d39d5797883c5d91206d495.svg",
+    "index.html": "/index.html",
+    "main.ec7f8acf.css.map": "/static/css/main.ec7f8acf.css.map",
+    "main.0f4a98c6.js.map": "/static/js/main.0f4a98c6.js.map",
+    "498.8c7f5c60.chunk.js.map": "/static/js/498.8c7f5c60.chunk.js.map",
+    "703.674d2745.chunk.js.map": "/static/js/703.674d2745.chunk.js.map",
+    "598.2dcf40a8.chunk.js.map": "/static/js/598.2dcf40a8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec7f8acf.css",
+    "static/js/main.0f4a98c6.js"
+  ]
+}

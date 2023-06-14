@@ -7,12 +7,12 @@ const Suru = () => {
     <div>
     <h1 className='title'>Kata Kerja -U</h1>
     <h2 className='subtitle'>Pola Kalimat Kata Kerja -U (Bentuk Kamus)</h2>
-    <div className='card'>
+    <div className='card' style={{backgroundColor: '#ffffe0'}}>
         <div className='card-content'>
             <nav className="pagination is-right" role="navigation" aria-label="pagination">
               <ul className="pagination-list">
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/surup"}>1</NavLink></a></li>
-                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/maenip"}>2</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1" style={{backgroundColor: '#8b4513'}}><NavLink to={"/surup"} style={{color: 'white'}}>1</NavLink></a></li>
+                <li><a className="pagination-link" aria-label="Goto page 1"><NavLink to={"/maenip"} style={{color: 'black'}}>2</NavLink></a></li>
               </ul>
             </nav>
             <strong>1. Pngertian kata kerja bentuk U(bentuk kamus) atau する</strong>

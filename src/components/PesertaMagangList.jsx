@@ -7,6 +7,7 @@ import { FaTrash, FaEdit } from 'react-icons/fa';
 
 const PesertaMagangList = () => {
     const [pesertamagang, setPesertaMagang] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
     const MySwal = withReactContent(Swal);
 
     useEffect(()=>{
@@ -39,11 +40,32 @@ const PesertaMagangList = () => {
       })
     }
 
+    const handleSearch = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const filteredPesertaMagang = pesertamagang.filter((pesertamagangs) => {
+        return (
+        pesertamagangs.nama.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    });
+
   return (
     <div>
         <h1 className='title'>Peserta Magang</h1>
         <h2 className='subtitle'>Daftar Kenshusei</h2>
-        <Link to="/kenshusei/add" className='button is-primary mb-2'>Tambah</Link>
+        <div className='columns'>
+        <div className='column'>
+        <Link to="/kenshusei/add" className='button is-primary mb-2'>Tambah</Link></div>
+        <div className='column is-4 is-offset-8'>
+         <div className="control is-one-fifth ">
+          <input
+            className="input"
+            type="text"
+            placeholder="Cari berdasarkan Nama"
+            value={searchTerm}
+            onChange={handleSearch}
+          /></div></div></div>
         <table className='table is-striped is-fullwidth is-bordered is-hoverable' style={{backgroundColor: '#FFFFE0'}}>
             <thead>
                 <tr>
@@ -61,7 +83,7 @@ const PesertaMagangList = () => {
                 </tr>
             </thead>
             <tbody>
-            {pesertamagang.map((pesertamagang, index)=>(
+            {filteredPesertaMagang.map((pesertamagang, index)=>(
                 <tr key={pesertamagang.uuid}>
                     <td>{index + 1}</td>
                     <td>{pesertamagang.nama}</td>
